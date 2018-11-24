@@ -3,26 +3,16 @@ package medicPlus;
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import static medicPlus.Controller.*;
+
 
 public class SystemMedic {
 
     public static void startSystem(){
 
-        JFrame f = montarFrame();
+        Controller cot = new Controller();
+        cot.dashboard();
 
-        Dashboard dash = new Dashboard();
-        dash.montarDashboard(f);
-
-        configFrame(f);
-
-    }
-
-    public static JFrame montarFrame() {
-
-        JFrame f = new JFrame("MEDIC+ :: Dashboard");
-        menuBar(f);
-
-        return f;
 
     }
 

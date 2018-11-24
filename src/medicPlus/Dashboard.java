@@ -5,6 +5,8 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+import static com.sun.deploy.uitoolkit.ToolkitStore.dispose;
+
 
 public class Dashboard{
 
@@ -72,9 +74,11 @@ public class Dashboard{
             @Override
             public void actionPerformed(ActionEvent e) {
 
-                // todo criar classe controller para gerenciar
+                Controller cot = new Controller();
+                cot.detalhes();
 
             }
+
         });
 
         btPesq.setBounds(300, 80, 50,20);
@@ -82,4 +86,6 @@ public class Dashboard{
 
 
     }
+
+
 }
