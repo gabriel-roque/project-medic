@@ -1,23 +1,14 @@
 package medicPlus;
 
 import javax.swing.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
-public class System {
-
-
-    public static void main(String[] args) {
-
-
-        startSystem(); // inicia o sistema
-
-
-
-    }
+public class SystemMedic {
 
     public static void startSystem(){
 
         JFrame f = montarFrame();
-        menuBar(f);
 
         Dashboard dash = new Dashboard();
         dash.montarDashboard(f);
@@ -28,13 +19,15 @@ public class System {
 
     public static JFrame montarFrame() {
 
-        JFrame f = new JFrame("MEDIC+");
+        JFrame f = new JFrame("MEDIC+ :: Dashboard");
+        menuBar(f);
+
         return f;
 
     }
 
 
-    private static void menuBar(JFrame f) {
+    public static void menuBar(JFrame f) {
 
         JMenu menuArquivo = new JMenu("Arquivo");
             JMenu subMenuSalvar = new JMenu("Salvar");
@@ -42,7 +35,9 @@ public class System {
                 JMenuItem itemSalvar = new JMenuItem("Salvar");
                 JMenuItem itemSalComo = new JMenuItem("Salvar como");
                 JMenuItem gr = new JMenuItem("Exportar PDF");
-        JMenu menuSair = new JMenu("Sair");
+        JMenu navegar = new JMenu("Navegar");
+            JMenuItem inicio = new JMenuItem("Inicio");
+            JMenuItem sair = new JMenuItem("Sair");
 
         subMenuSalvar.add(itemSalvar);
         subMenuSalvar.add(itemSalComo);
@@ -50,20 +45,31 @@ public class System {
         menuArquivo.add(subMenuSalvar);
         menuArquivo.addSeparator();
         menuArquivo.add(gr);
-        menuArquivo.add(menuSair);
+
+        navegar.add(inicio);
+        navegar.add(sair);
 
 
         JMenuBar menuCompleto = new JMenuBar();
         menuCompleto.add(menuArquivo);
-        menuCompleto.add(menuSair);
+        menuCompleto.add(navegar);
         f.setJMenuBar(menuCompleto);
+
+        //EVENTS BAR
+
+        sair.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                System.exit(0);
+            }
+        });
 
     }
 
 
     public static void configFrame(JFrame f) {
 
-        f.setSize(500, 300);
+        f.setSize(400, 300);
         f.setResizable(false);
         f.setLayout(null);
         f.setVisible(true);
