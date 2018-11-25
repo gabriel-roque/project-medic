@@ -13,7 +13,8 @@ public class Dashboard{
 
     public void montarDashboard(JFrame f){
 
-        String[] clientes = {"Gabriel Roque de Mirada", "Jadilson Guedes Silva", "Felipe Oliveira Alves", "Lucas Roque Falcao"};
+        String[] clientes = {"Camila Rocha", "Exemplo Nome Completo", "Exemplo Nome Completo",
+                "Exemplo Nome Completo", "Exemplo Nome Completo"};
 
         //LABEL Cliente
 

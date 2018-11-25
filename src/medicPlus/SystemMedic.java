@@ -11,8 +11,7 @@ public class SystemMedic {
     public static void startSystem(){
 
         Controller cot = new Controller();
-        cot.detalhes();
-
+        cot.dashboard();
 
     }
 
@@ -47,6 +46,8 @@ public class SystemMedic {
 
         //EVENTS BAR
 
+        //todo chamada para a tela de login
+
         sair.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -57,9 +58,9 @@ public class SystemMedic {
     }
 
 
-    public static void configFrame(JFrame f) {
+    public static void configFrame(JFrame f, int width, int height) {
 
-        f.setSize(400, 300);
+        f.setSize(width, height);
         f.setResizable(false);
         f.setLayout(null);
         f.setVisible(true);

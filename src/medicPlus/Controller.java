@@ -15,7 +15,7 @@ public class Controller {
         Dashboard dash = new Dashboard();
         dash.montarDashboard(f);
 
-        configFrame(f);
+        configFrame(f, 400, 300);
 
     }
 
@@ -27,7 +27,7 @@ public class Controller {
         Detalhes det = new Detalhes();
         det.montarDetalhes(f);
 
-        configFrame(f);
+        configFrame(f, 400, 300);
 
     }
 

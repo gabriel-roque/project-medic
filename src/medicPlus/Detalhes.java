@@ -2,10 +2,16 @@ package medicPlus;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import static com.sun.deploy.uitoolkit.ToolkitStore.dispose;
 
 public class Detalhes{
 
     public void montarDetalhes(JFrame f){
+
+        // GRID DE DADOS
 
         JSeparator sp1 = new JSeparator();
             sp1.setBounds(10, 10, 130, 10);
@@ -53,7 +59,6 @@ public class Detalhes{
             sexo.setFont(fontCP);
             f.add(sexo);
 
-
         lbCPF = new JLabel("CPF");
             lbCPF.setBounds(15,175, 100,15);
             lbCPF.setFont(fontD);
@@ -63,6 +68,67 @@ public class Detalhes{
             cpf.setBounds(15,200, 100,15);
             cpf.setFont(fontCP);
             f.add(cpf);
+
+
+        // LABEL TABELA
+
+        JLabel data, tipo, valor;
+
+        data = new JLabel("Data");
+            data.setBounds(160, 10,80,20);
+            data.setFont(fontD);
+            f.add(data);
+
+        tipo = new JLabel("Tipo");
+            tipo.setBounds(232, 10,80,20);
+            tipo.setFont(fontD);
+            f.add(tipo);
+
+        valor = new JLabel("Valor");
+            valor.setBounds(308, 10,80,20);
+            valor.setFont(fontD);
+            f.add(valor);
+
+        // TABELA (AGENDA)
+
+        String date[][]=
+                {{"10/01/18","Consulta","R$ 0"},
+                {"15/02/18","Exame","R$ 85,00"},
+                {"16/02/18","Exame","R$ 336,00"},
+                {"12/05/18", "Consulta", "R$ 115,00"},
+                {"31/08/18", "Exame", "R$ 255,00"},
+                {"22/12/18", "Retorno", "R$ 0"}};
+
+        String collumn[] = {"DATA", "TIPO", "VALOR"};
+
+        JTable tabela = new JTable(date, collumn);
+        tabela.setBounds(160,40,220,160);
+
+        f.add(tabela);
+
+
+        // BUTTON DASHBOARD
+
+        JButton back = new JButton("Voltar");
+            back.setBounds(230, 215, 80,25);
+            f.add(back);
+
+        back.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+
+                Controller cot = new Controller();
+                cot.dashboard();
+
+
+
+            }
+        });
+
+
+
+
+
 
 
 
