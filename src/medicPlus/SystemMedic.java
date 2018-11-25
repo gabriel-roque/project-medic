@@ -11,7 +11,7 @@ public class SystemMedic {
     public static void startSystem(){
 
         Controller cot = new Controller();
-        cot.dashboard();
+        cot.detalhes();
 
 
     }

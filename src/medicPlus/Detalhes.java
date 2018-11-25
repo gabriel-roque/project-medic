@@ -28,7 +28,7 @@ public class Detalhes{
 
         JLabel lbNome, lbSexo, lbCPF;
         JLabel nome, sexo, cpf;
-        String[] p1 = {"Gabriel Roque", "Masculino", "559.035.996-89"};
+        String[] p1 = {"Camila Rocha", "Feminino", "559.035.996-89"};
 
         Font fontD = new Font("SansSerif", Font.BOLD, 18);
         Font fontCP = new Font("SansSerif", Font.ITALIC, 14);
@@ -43,19 +43,26 @@ public class Detalhes{
             nome.setFont(fontCP);
             f.add(nome);
 
-
-
-
         lbSexo = new JLabel("SEXO");
             lbSexo.setBounds(15,100, 100,15);
             lbSexo.setFont(fontD);
             f.add(lbSexo);
+
+        sexo = new JLabel(p1[1]);
+            sexo.setBounds(15,135, 100,15);
+            sexo.setFont(fontCP);
+            f.add(sexo);
 
 
         lbCPF = new JLabel("CPF");
             lbCPF.setBounds(15,175, 100,15);
             lbCPF.setFont(fontD);
             f.add(lbCPF);
+
+        cpf = new JLabel(p1[2]);
+            cpf.setBounds(15,200, 100,15);
+            cpf.setFont(fontCP);
+            f.add(cpf);
 
 
 
