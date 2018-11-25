@@ -43,4 +43,15 @@ public class Controller {
         configFrame(f, 400, 300);
 
     }
+
+    public void login(){
+
+        JFrame f = new JFrame("MEDIC+ :: Login");
+
+        Login login = new Login();
+        login.montarLogin(f);
+
+        configFrame(f, 400, 300);
+
+    }
 }
