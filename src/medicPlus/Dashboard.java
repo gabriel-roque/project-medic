@@ -29,6 +29,13 @@ public class Dashboard{
 
         JButton btNewCli = new JButton("Novo Cliente");
             btNewCli.setBounds(255,10, 130,25);
+            btNewCli.addActionListener(new ActionListener() {
+                @Override
+                public void actionPerformed(ActionEvent e) {
+                    Controller cot = new Controller();
+                    cot.newCliente();
+                }
+            });
         f.add(btNewCli);
 
         //SEPARATOR
@@ -84,9 +91,5 @@ public class Dashboard{
 
         btPesq.setBounds(300, 80, 50,20);
         f.add(btPesq);
-
-
     }
-
-
 }

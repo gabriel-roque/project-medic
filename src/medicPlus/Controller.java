@@ -31,6 +31,16 @@ public class Controller {
 
     }
 
+    public void newCliente(){
 
 
+        JFrame f = new JFrame("MEDIC+ :: Novo Cliente");
+        menuBar(f);
+
+        NovoCliente newCli = new NovoCliente();
+        newCli.montarNewCli(f);
+
+        configFrame(f, 400, 300);
+
+    }
 }
