@@ -2,10 +2,6 @@ package medicPlus;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-
-import static com.sun.deploy.uitoolkit.ToolkitStore.dispose;
 
 public class Detalhes{
 
@@ -113,26 +109,15 @@ public class Detalhes{
             back.setBounds(230, 215, 80,25);
             f.add(back);
 
-        back.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
+        back.addActionListener(e -> {
 
-                Controller cot = new Controller();
-                cot.dashboard();
-
+            Controller cot = new Controller();
+            f.dispose();
+            cot.dashboard();
 
 
-            }
+
         });
-
-
-
-
-
-
-
-
-
 
 
     }

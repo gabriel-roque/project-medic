@@ -46,20 +46,12 @@ public class SystemMedic {
 
         //EVENTS BAR
 
-        inicio.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                Controller cot = new Controller();
-                cot.login();
-            }
+        inicio.addActionListener(e -> {
+            Controller cot = new Controller();
+            cot.login();
         });
 
-        sair.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                System.exit(0);
-            }
-        });
+        sair.addActionListener(e -> System.exit(0));
 
     }
 

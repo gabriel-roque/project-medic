@@ -5,9 +5,6 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-import static com.sun.deploy.uitoolkit.ToolkitStore.dispose;
-
-
 public class Dashboard{
 
 
@@ -29,12 +26,10 @@ public class Dashboard{
 
         JButton btNewCli = new JButton("Novo Cliente");
             btNewCli.setBounds(255,10, 130,25);
-            btNewCli.addActionListener(new ActionListener() {
-                @Override
-                public void actionPerformed(ActionEvent e) {
-                    Controller cot = new Controller();
-                    cot.newCliente();
-                }
+            btNewCli.addActionListener(e -> {
+                Controller cot = new Controller();
+                f.dispose();
+                cot.newCliente();
             });
         f.add(btNewCli);
 
@@ -78,14 +73,11 @@ public class Dashboard{
         JButton btPesq = new JButton();
         btPesq.setIcon(new ImageIcon(getClass().getResource("/public/lupa.png")));
 
-        btPesq.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
+        btPesq.addActionListener(e -> {
 
-                Controller cot = new Controller();
-                cot.detalhes();
-
-            }
+            Controller cot = new Controller();
+            f.dispose();
+            cot.detalhes();
 
         });
 

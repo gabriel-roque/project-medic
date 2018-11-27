@@ -50,12 +50,10 @@ public class Login {
 
     JButton logar = new JButton("Login");
         logar.setBounds(152,230, 90,20);
-        logar.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                Controller cot = new Controller();
-                cot.dashboard();
-            }
+        logar.addActionListener(e -> {
+            Controller cot = new Controller();
+            f.dispose();
+            cot.dashboard();
         });
         f.add(logar);
 
