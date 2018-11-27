@@ -5,7 +5,6 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-import static com.sun.deploy.uitoolkit.ToolkitStore.dispose;
 
 
 public class Dashboard{
@@ -34,6 +33,7 @@ public class Dashboard{
                 public void actionPerformed(ActionEvent e) {
                     Controller cot = new Controller();
                     cot.newCliente();
+                    f.setVisible(false);
                 }
             });
         f.add(btNewCli);
@@ -84,6 +84,7 @@ public class Dashboard{
 
                 Controller cot = new Controller();
                 cot.detalhes();
+                f.setVisible(false);
 
             }
 

@@ -55,6 +55,7 @@ public class Login {
             public void actionPerformed(ActionEvent e) {
                 Controller cot = new Controller();
                 cot.dashboard();
+                f.setVisible(false);
             }
         });
         f.add(logar);
