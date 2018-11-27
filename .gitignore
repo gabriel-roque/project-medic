@@ -2,6 +2,9 @@
 .idea
 .iml
 project-medic.iml
+.mf
+.MF
+META-INF/
 
 # Created by https://www.gitignore.io/api/intellij
 # Edit at https://www.gitignore.io/?templates=intellij
