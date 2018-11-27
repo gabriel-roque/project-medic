@@ -51,6 +51,7 @@ public class SystemMedic {
             public void actionPerformed(ActionEvent e) {
                 Controller cot = new Controller();
                 cot.login();
+                f.setVisible(false);
             }
         });
 

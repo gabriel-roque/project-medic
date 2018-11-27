@@ -118,7 +118,7 @@ public class Detalhes{
 
                 Controller cot = new Controller();
                 cot.dashboard();
-                f.setResizable(false);
+                f.setVisible(false);
 
             }
         });
