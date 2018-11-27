@@ -1,7 +1,7 @@
 # Medic PLUS+
 Projeto 4 SEMESTRE JAVA
 
-![apm](https://img.shields.io/badge/License-OpenSource-green.svg)
+![apm](https://img.shields.io/badge/License-OpenSource-green.svg?longCache=true&style=for-the-badge)
 
 ## Camadas de Interface
 
