@@ -1,6 +1,7 @@
 package medicPlus;
 
 import javax.swing.*;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import static medicPlus.Controller.*;
@@ -71,6 +72,9 @@ public class SystemMedic {
         f.setResizable(false);
         f.setLayout(null);
         f.setVisible(true);
+        Dimension ds = Toolkit.getDefaultToolkit().getScreenSize();
+        Dimension dw = f.getSize();
+        f.setLocation((ds.width - dw.width) / 4, (ds.height - dw.height) / 4);
         f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
     }
